@@ -1,0 +1,27 @@
+.calendar-body {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .titles,
+  .time,
+  .evt-container {
+    border: 1px solid rgba(238, 238, 238, 0.137);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 45px;
+    width: calc(1000px / 6);
+
+    &:hover {
+      border: 1px solid #eee;
+    }
+  }
+
+  .titles {
+    background-color: #262626;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  }
+}

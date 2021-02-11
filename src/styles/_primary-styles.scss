@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #12121f;
+  color: #eee;
+}
+
+.calendar-container {
+  width: 1000px;
+  height: 500px;
+
+  background-color: #222227;
+  box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+%btn {
+  width: 130px;
+  height: 30px;
+
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(27, 92, 27);
+  cursor: pointer;
+
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #eee;
+
+  transition: all 200ms linear;
+
+  &:hover {
+    border: 1px solid rgba(238, 238, 238, 0.418);
+    background-color: #12121f;
+  }
+}

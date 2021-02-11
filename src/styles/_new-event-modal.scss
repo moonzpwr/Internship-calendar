@@ -1,0 +1,119 @@
+.backdrop {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: rgba(33, 33, 33, 0.9);
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 700px;
+  padding: 30px 100px;
+  overflow: hidden;
+
+  background-color: #12121f;
+
+  h2 {
+    margin-bottom: 30px;
+
+    text-align: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  }
+}
+
+.form-field,
+.multiply {
+  margin-bottom: 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  input,
+  select {
+    height: 30px;
+    width: 300px;
+  }
+
+  svg {
+    position: absolute;
+    left: 580px;
+    pointer-events: none;
+  }
+}
+
+.multiply input {
+  cursor: default;
+}
+
+.dropdown {
+  position: absolute;
+  z-index: 5;
+  top: 178px;
+  left: 301px;
+
+  background-color: #fff;
+  width: 298px;
+  color: #000;
+
+  display: flex;
+  flex-direction: column;
+  padding-left: 5px;
+
+  font-size: 13.3333px;
+
+  .item {
+    height: 16px;
+    width: auto;
+    margin-right: 5px;
+  }
+
+  div {
+    display: flex;
+  }
+
+  label {
+    width: 100%;
+  }
+}
+
+.close-modal-btn,
+.submit-btn {
+  @extend %btn;
+}
+
+form .close-modal-btn {
+  margin-left: 130px;
+  background-color: #bd3a4c;
+}
+
+.notofication {
+  position: absolute;
+  top: -60px;
+  left: 0;
+
+  width: 100%;
+  padding: 20px;
+
+  background-color: #bd3a4c;
+  text-align: center;
+  font-weight: 700;
+  color: #eee;
+  text-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.5);
+
+  pointer-events: none;
+  transition: top 300ms linear;
+}
+.notofication.is-open {
+  top: 0;
+}

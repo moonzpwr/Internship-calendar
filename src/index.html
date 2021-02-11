@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting calendar</title>
+</head>
+<body>
+    
+<div class="container">
+    <div class="calendar-container">
+        <div class="calendar-head">
+        <h1>Calendar</h1>
+        <select name="participant" id="filter">
+            <option value="" >Show all</option>
+            <option value="dog">dog</option>
+            <option value="cat">cat</option>
+            <option value="badger">badger</option>
+            <option value="bird">bird</option>
+        </select>
+        <button type='button' data-modal-open>New event +</button>
+        </div>
+        <div class="calendar-body">
+            <div class="titles">Name</div>
+            <div class="titles">Mon</div>
+            <div class="titles">Tue</div>
+            <div class="titles">Wed</div>
+            <div class="titles">Thu</div>
+            <div class="titles">Fri</div>
+         
+            <div class="time">10:00</div>
+            <div data-mon-10 class="evt-container"></div>
+            <div data-tue-10 class="evt-container"></div>
+            <div data-wed-10 class="evt-container"></div>
+            <div data-thu-10 class="evt-container"></div>
+            <div data-fri-10 class="evt-container"></div>
+          
+            <div class="time">11:00</div>
+            <div data-mon-11 class="evt-container"></div>
+            <div data-tue-11 class="evt-container"></div>
+            <div data-wed-11 class="evt-container"></div>
+            <div data-thu-11 class="evt-container"></div>
+            <div data-fri-11 class="evt-container"></div>
+           
+            <div class="time">12:00</div>
+            <div data-mon-12 class="evt-container"></div>
+            <div data-tue-12 class="evt-container"></div>
+            <div data-wed-12 class="evt-container"></div>
+            <div data-thu-12 class="evt-container"></div>
+            <div data-fri-12 class="evt-container"></div>
+            
+            <div class="time">13:00</div>
+            <div data-mon-13 class="evt-container"></div>
+            <div data-tue-13 class="evt-container"></div>
+            <div data-wed-13 class="evt-container"></div>
+            <div data-thu-13 class="evt-container"></div>
+            <div data-fri-13 class="evt-container"></div>
+            
+            <div class="time">14:00</div>
+            <div data-mon-14 class="evt-container"></div>
+            <div data-tue-14 class="evt-container"></div>
+            <div data-wed-14 class="evt-container"></div>
+            <div data-thu-14 class="evt-container"></div>
+            <div data-fri-14 class="evt-container"></div>
+            
+            <div class="time">15:00</div>
+            <div data-mon-15 class="evt-container"></div>
+            <div data-tue-15 class="evt-container"></div>
+            <div data-wed-15 class="evt-container"></div>
+            <div data-thu-15 class="evt-container"></div>
+            <div data-fri-15 class="evt-container"></div>
+           
+            <div class="time">16:00</div>
+            <div data-mon-16 class="evt-container"></div>
+            <div data-tue-16 class="evt-container"></div>
+            <div data-wed-16 class="evt-container"></div>
+            <div data-thu-16 class="evt-container"></div>
+            <div data-fri-16 class="evt-container"></div>
+           
+            <div class="time">17:00</div>
+            <div data-mon-17 class="evt-container"></div>
+            <div data-tue-17 class="evt-container"></div>
+            <div data-wed-17 class="evt-container"></div>
+            <div data-thu-17 class="evt-container"></div>
+            <div data-fri-17 class="evt-container"></div>
+            
+            <div class="time">18:00</div>
+            <div data-mon-18 class="evt-container"></div>
+            <div data-tue-18 class="evt-container"></div>
+            <div data-wed-18 class="evt-container"></div>
+            <div data-thu-18 class="evt-container"></div>
+            <div data-fri-18 class="evt-container"></div>
+        </div>
+    </div>
+    <div class='backdrop' data-modal>
+        <div class="modal">
+            <p class="notofication">Failed to create an event. Time slote is alredy booked.</p>
+            <h2>Registration new event</h2>
+                <form id='js-form'>
+                    <div class='form-field'>
+                        <label for="name">Name of the event:</label>
+                            <input type="text" id="name" required>
+                    </div>
+                    <div class='multiply'>
+                        <label for='participants'>Participants:</label>
+                            <input type="text" name="participants" id="participants" readonly required>
+                            <svg width="20" height="20" viewBox="0 0 24 24"> 
+                                <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
+                            </svg>
+                            <div class="dropdown visually-hidden">
+                                <div>
+                                <input type="checkbox" class="item" id="dog" name="dog"><label for="dog">Dog</label>
+                                </div>
+                                <div>
+                                <input type="checkbox" class="item" id="cat" name="cat"><label for="cat">Cat</label>
+                                </div>
+                                <div>
+                                <input type="checkbox" class="item" id="badger" name="badger"><label for="badger">Badger</label>
+                                </div>
+                                <div>
+                                <input type="checkbox" class="item" id="bird" name="bird"><label for="bird">Bird</label>
+                                </div>
+                            </div>
+                    </div>
+                    <div class='form-field'>
+                        <label for="day">Day:</label>
+                            <select name="day" id="day" required >
+                                <option value="">&nbsp;</option>
+                                <option value="mon">Monday</option>
+                                <option value="tue">Tuesday</option>
+                                <option value="wed">Wednesday</option>
+                                <option value="thu">Thursday</option>
+                                <option value="fri">Friday</option>
+                            </select>
+                        
+                        </div>
+                        <div class='form-field'>
+                        <label for="time">Time:</label>
+                            <select name="time" id="time" required >
+                                <option value="">&nbsp;</option>
+                                <option value="10">10:00</option>
+                                <option value="11">11:00</option>
+                                <option value="12">12:00</option>
+                                <option value="13">13:00</option>
+                                <option value="14">14:00</option>
+                                <option value="15">15:00</option>
+                                <option value="16">16:00</option>
+                                <option value="17">17:00</option>
+                                <option value="18">18:00</option>
+                            </select>
+                        
+                    </div>
+                    <button type="button" class="close-modal-btn" data-modal-close>Cancel</button>
+                    <button type="submit" class="submit-btn">Create</button>
+                </form>
+        </div>
+
+    </div>
+    <div class="confirmation-backdrop">
+        <div class="confirmation">
+            <p id="delete-item-name">Are you sure you want to delete event?</p>
+            <button type="button" class="y-btn">Yes</button>
+            <button type="button" class="n-btn">No</button>
+        </div>
+
+    </div>
+</div>
+
+
+
+    <script src='./js/index.js'></script>
+</body>
+</html>
