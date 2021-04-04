@@ -1,4 +1,4 @@
-# Internship-calendar
+# Meeting-calendar
 
 ## Basic implementation logic
 
